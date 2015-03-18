@@ -1,0 +1,8 @@
+
+
+file|sent-num|tok-num|word|pos|lemma|rolesconf|simpleroles|depverb|tense|polarity|mainphrase|PPdetail|wn|extra1|extra2|extra3|extra4|extra5|extra6|element|te-type|DCT|ref-val|value
+
+TIMEX-EXTRA: te-numval te-pattern lastword lastNU lastwordgranularity setinicator
+
+# OLD file sent-num tok-num te-type tid te-numval te-pattern tense PPdetail DCT tf ref ref-id ref-val value
+#norm-type (last attribute is optional [present in training omited in testing])

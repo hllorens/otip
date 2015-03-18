@@ -1,0 +1,31 @@
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 sent-num| 2 tok-num|
+# 3 word| 4 pos | 5 lemma|
+# 6 rolesconf| 7 simpleroles| 8 depverb|
+# 9 tense| 10 polarity| 11 mainphrase| 12 PPdetail| 13 wn
+#TIMEX: te-numval te-pattern lastword lastNU lastwordgranularity setinicator
+#EVENT: depverb   verbfeat1 verbfeat2 verbfeat3 verbfeat4 unused
+
+# lemma
+U05:%x[0,5]
+# POS
+U06:%x[0,4]
+# word
+U09:%x[0,3]
+
+# tense, polarity, PPdetail
+#U10:%x[0,9]
+#U11:%x[0,10]
+U12:%x[0,12]
+
+# TIMEK lexical semantics
+U20:%x[0,14]
+U21:%x[0,15]
+U22:%x[0,16]
+U23:%x[0,17]
+U24:%x[0,18]
+U25:%x[0,19]
+

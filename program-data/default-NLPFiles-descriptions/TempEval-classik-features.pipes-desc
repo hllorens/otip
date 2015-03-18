@@ -1,0 +1,7 @@
+
+file|sent-num|tok-num|word|pos|lemma|rolesconf|simpleroles|depverb|tense|polarity|mainphrase|PPdetail|wn|extra1|extra2|extra3|extra4|extra5|extra6|element
+
+TIMEX: te-numval te-pattern lastword lastNU lastwordgranularity setinicator
+EVENT: depverb   verbfeat1 verbfeat2 verbfeat3 verbfeat4 unused
+
+after WN the 6 features are element specific (TIMEX-EVENT)

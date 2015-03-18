@@ -1,0 +1,19 @@
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 sent-num| 2 tok-num|
+# 3 word| 4 pos | 5 lemma|
+# 6 eclass| 7 simpleroles| 8 depverb|
+# 9 detail-pos | 10 polarity| 11 mainphrase| 12 PPdetail| 13 wn
+
+# ECLASS
+U01:%x[0,6]
+
+# lemma
+U05:%x[0,5]
+# POS - DeSR
+U06:%x[0,9]
+# word
+U09:%x[0,3]
+

@@ -1,0 +1,8 @@
+F:0:4..8
+
+#F:0:4..5,7,8
+
+# 0 file| 1 lid | 2 eid | 3 tid |    
+# 4 e_class| 5 e_pos| 6 e_token| 7 e_tense | 8 e_tense-aspect| 9 e_govPP| 10 e_govTMPSub| 11 gov_e_class| 12 gov_e_pos| 13 gov_e_token| 14 gov_e_tense-aspect
+
+

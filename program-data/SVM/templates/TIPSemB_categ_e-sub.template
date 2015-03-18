@@ -1,0 +1,4 @@
+F:0:4..8,11..15,18
+
+# 0 file| 1 lid | 2 eid | 3 tid |    
+# 4 e1_class| 5 e1_pos| 6 e1_token| 7 e1_tense| 8 e1_tense-aspect| 9 e1_govPP| 10 e1_govTMPSub| 11 e2_class| 12 e2_pos|13 e2_token|14 e2_tense|15 e2_tense-aspect| 16 e2_govPP| 17 e2_govTMPSub| 18 syntrel

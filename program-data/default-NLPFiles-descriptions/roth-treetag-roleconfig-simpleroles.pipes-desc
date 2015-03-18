@@ -1,0 +1,6 @@
+
+word|pos|syntbio|sentence|synt|verb|lemma|roleconf|simplerolesIOB2|simplerolesIOB2_verb|simpleroles|depverb|tense|assertype
+
+after verb there are variable/optional roles columns
+
+

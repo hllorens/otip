@@ -1,0 +1,42 @@
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 sent-num| 2 tok-num|
+# 3 word| 4 pos | 5 syntbio| 6 sentence|
+# 7 synt| 8 verb| 9 lemma| 10 wn
+# ROLES: 11 roleconf| 12 simplerolesIOB2| 13 simplerolesIOB2_verb| 14 simpleroles| 15 depverb| 16 tense| 17 assertype|
+# 18 iobmainphrase| 19 mainp-position| 20 phra_id| 21 PPdetail
+
+# role
+U00:%x[0,14]
+
+# POS/ROLE
+U02:%x[-1,4]/%x[-1,12]
+U03:%x[0,4]/%x[0,12]
+U04:%x[1,4]/%x[1,12]
+
+
+#U10:%x[-2,9]
+U11:%x[-1,9]
+U12:%x[0,9]
+U13:%x[1,9]
+#U14:%x[2,9]
+
+U16:%x[0,9]/%x[0,12]
+
+#U17:%x[-1,5]/%x[-1,12]
+#U18:%x[0,4]/%x[0,5]/%x[0,14]
+
+
+#U07:%x[-1,9]/%x[-1,12]
+#U08:%x[0,9]/%x[0,12]
+#U09:%x[1,9]/%x[1,12]
+
+#U10:%x[0,18]
+
+#U20:%x[1,10] # NOT HELPFUL
+#U21:%x[2,10]
+
+# Bigram
+B

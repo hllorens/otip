@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="EVENT" attribs="class=OCCURRENCE;">
+		// pos==^V.*(_*_)synt==.*\(VP\*(_*_)lemma==(rise|fall|close|buy|sell|pay|acquire)
+		// pos==^NN.*(_*_)synt==.*\(NP\*(_*_)lemma==(offer|trading|sale|loss|acquisition)
+		<!--<rule id="1">pos==^V.*(_*_)synt==.*\(VP\*</rule>-->
+		<!--<rule id="2">pos==^NN.*</rule>-->
+		<rule id="1">verb!=(-|be)</rule>
+</ruleset></rulesets>

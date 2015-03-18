@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="SIGNAL" attribs="">
+		// Test synt only ending in ... \* like EVENT OCCURRENCE
+		<rule id="1">pos==(IN|RB|WRB)(_*_)synt==.*(PP|SBAR|ADVP|WHADVP).*(_*_)lemma==(in|after|if|when|until|before|since|end|during|previousely|later)</rule>
+</ruleset></rulesets>

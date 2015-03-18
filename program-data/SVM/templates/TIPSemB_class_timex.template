@@ -1,0 +1,11 @@
+F:0:3..5 F:0:11 F:0:12
+
+#F:0:7 F:0:8 F:0:7,8 F:0:6 F:0:7 F:0:5 F:0:4 F:0:11 F:0:13 F:0:3 F:0:9 F:0:10 F:0:12
+
+# the / is used for combinations
+# 0 file| 1 sent-num| 2 tok-num|
+# 3 word| 4 pos | 5 lemma|
+# 6 rolesconf| 7 simpleroles| 8 depverb|
+# 9 tense| 10 polarity| 11 mainphrase| 12 PPdetail| 13 wn
+
+

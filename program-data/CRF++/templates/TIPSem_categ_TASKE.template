@@ -1,0 +1,12 @@
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 eid | 2 tid |    
+# 3 tense-aspect | 4 tense-aspect2 | 5 samesent_s | 6 valdif 
+
+#U00:%x[0,3]
+#U01:%x[0,4]
+U02:%x[0,5]
+#U03:%x[0,6]
+U04:%x[0,3]/%x[0,4]

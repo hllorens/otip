@@ -1,0 +1,20 @@
+# the / is used for combinations
+
+# 0 file| 1 lid | 2 eid | 3 tid |    
+# 4 e_class| 5 e_pos| 6 e_token| 7 e_tense | 8 e_tense-aspect| 9 e_govPP| 10 e_govTMPSub| 11 gov_e_class| 12 gov_e_pos| 13 gov_e_token| 14 gov_e_tense-aspect
+
+
+
+
+U00:%x[0,4]
+U01:%x[0,5]
+U02:%x[0,6]
+U03:%x[0,7]
+U04:%x[0,8]
+#U05:%x[0,9]
+#U06:%x[0,10]
+#U07:%x[0,11]
+#U08:%x[0,12]
+#U09:%x[0,13]
+#U10:%x[0,14]
+

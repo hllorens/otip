@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="SIGNAL" attribs="">
+		<rule id="1">pos==(IN|RB|WRB)(_*_)synt==.*(PP|SBAR|ADVP|WHADVP).*</rule>
+</ruleset></rulesets>

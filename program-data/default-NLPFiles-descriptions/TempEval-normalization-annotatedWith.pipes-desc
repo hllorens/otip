@@ -1,0 +1,4 @@
+
+file|sent-num|tok-num|word|pos|lemma|rolesconf|simpleroles|depverb|tense|polarity|mainphrase|PPdetail|wn|extra1|extra2|extra3|extra4|extra5|extra6|element|te-type|DCT|ref-val|value|norm-type2
+
+#norm-type (priorlast attribute is optional [present in training omited in testing])

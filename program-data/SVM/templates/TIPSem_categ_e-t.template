@@ -1,0 +1,17 @@
+F:0:4,8,9..15
+
+#F:0:4..15 #79
+#F:0:4,11..14 # 40%
+#F:0:4,5,6,8,11..14 # 78\%
+#F:0:11..14 with this SVM does not converge
+#F:0:4,,8,11..14 this performs good in general files (strong baseline...), we need more experimentation
+
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 lid | 2 eid | 3 tid |    
+# 4 e_class| 5 e_pos| 6 e_token| 7 e_tense | 8 e_tense-aspect| 9 e_govPP| 10 e_govTMPSub| 11 t_type| 12 t_ref| 13 t_govPP| 14 t_govTMPSub|15 synt_relation
+
+
+

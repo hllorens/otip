@@ -1,0 +1,8 @@
+
+word|leading-blanks|pos|syntbio|sentence|synt|verb
+
+after verb there are variable/optional roles columns
+
+This is a sample pipes description file
+It should contain one line with a described columns
+of the extension file

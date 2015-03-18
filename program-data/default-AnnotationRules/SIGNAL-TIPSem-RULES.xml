@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="SIGNAL" attribs="">
+		// AM-ADV could be also useful, some extra knowledge of the composition of AM-TMP could be also useful (TIMEX, EVENT...)
+		// QUARTER (TO) TEN!=FROM X (TO) Y
+		// lemma!=of(_*_)
+		// (_*_)lemma==(in|after|if|when|until|before|since|end|during|previousely|later)
+		// (_*_)lemma==(in|after|for|if|when|on|until|before|by|from|since|through|as|over|end|during|already|previousely|at|within|while|later|meanwhile|follow)
+		// (_*_)lemma==(in|after|for|if|when|on|until|before|by|from|since|through|as|over|end|during|already|previousely|at|within|while|later|then|once|earlier|still|meanwhile|follow)
+		<rule id="1">pos==(IN|RB|WRB)(_*_)synt==.*(PP|SBAR|ADVP|WHADVP).*(_*_)simplerole==(AM-TMP|R-AM-TMP)(_*_)lemma==(in|after|for|if|when|on|until|before|by|from|since|through|as|over|end|during|already|previousely|at|within|while|later|meanwhile|follow)</rule>
+	</ruleset>
+</rulesets>

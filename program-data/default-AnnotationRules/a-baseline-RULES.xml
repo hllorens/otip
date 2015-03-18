@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+
+<rulesets id="1">
+	<ruleset id="1" tag="a" attribs="type=a-ha;test=the a;">
+		<rule id="1" span="1">word[0]==[aA]</rule>
+	</ruleset>
+</rulesets>
+
+

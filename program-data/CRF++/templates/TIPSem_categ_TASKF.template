@@ -1,0 +1,16 @@
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 eid | 2 tid |    
+# 3 SBARTMPevent| 4 PPevent | 5 tense-aspect | 
+# 6 SBARTMPevent2| 7 PPevent2 | 8 tense-aspect2
+
+#U00:%x[0,3]
+U01:%x[0,4]
+#U02:%x[0,5]
+#U03:%x[0,6]
+U04:%x[0,7]
+#U05:%x[0,8]
+U06:%x[0,5]/%x[0,8]
+

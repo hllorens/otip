@@ -1,0 +1,19 @@
+
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="TIMEX" attribs="type=DATE;">
+		// reglas de más larga a más corta
+
+		// TIMEK column: in pipes (probability is 100% if it is not possible amiguity)
+		// TIMEK -> month word-pos - 90%probability NE-probability (depend on TMP role, prior and following word...)
+		// 	 -> year  word	     50%probability
+		<concept id="1" name="month">word==(January|February|March|April|May|June|July|August|September|October|November|December|((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep[t]?|Sept|Oct|Nov|Dec)[\.]?))(_*_)pos==N.*</concept>
+		<concept id="2" name="year">word==(1\d\d\d|20[12]\d)(_*_)pos==card</concept>
+
+		<rule id="1" span="4">word[0]==(January|February|March|April|May|June|July|August|September|October|November|December|((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep[t]?|Sept|Oct|Nov|Dec)[\.]?))(_*_)pos[0]==N.*(_*_)</rule>
+
+		// THE BEST WAY
+		<rule id="5">TIMEK[0]==month(_*_)TIMEK[1]==number(_*_)word[2]==th(_*_)word[3]==,(_*_)TIMEK[3]==year</rule>
+		<rule id="4">TIMEK[0]==month(_*_)TIMEK[1]==number(_*_)word[2]==,(_*_)TIMEK[3]==year</rule>
+	</ruleset>
+</rulesets>

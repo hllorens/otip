@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="EVENT" attribs="class=STATE;">
+		// ...
+		<rule id="1">pos==^V.*(_*_)synt==.*\(VP\*(_*_)lemma==(remain|hold|own)</rule>
+		<rule id="2">pos==^NN.*(_*_)synt==.*\(NP\*(_*_)lemma==control</rule>
+		<rule id="3">pos==^JJ.*(_*_)synt==.*\(ADVP\*(_*_)lemma==(responsible|due)</rule>
+		<rule id="4">pos==^($|CD).*(_*_)synt==.*\(QP\*(_*_)lemma==($|@card@)</rule>
+</ruleset></rulesets>

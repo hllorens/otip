@@ -1,0 +1,39 @@
+# the / is used for combinations
+
+# Unigram
+
+# 0 file| 1 sent-num| 2 tok-num|
+# 3 word| 4 pos | 5 lemma|
+# 6 rolesconf| 7 simpleroles| 8 depverb|
+# 9 tense| 10 polarity| 11 mainphrase| 12 PPdetail| 13 wn
+#TIMEX: te-numval te-pattern lastword lastNU lastwordgranularity setinicator
+#EVENT: depverb   verbfeat1 verbfeat2 verbfeat3 verbfeat4 unused
+
+# role
+U00:%x[0,7]
+#depverb
+U01:%x[0,8]
+# roleiob-verb
+U02:%x[0,7]/%x[0,8]
+#roleconf
+U03:%x[0,6]
+# phra+role
+#U04:%x[0,11]/%x[0,7]
+
+# lemma
+U05:%x[0,5]
+# POS
+U06:%x[0,4]
+# mainphra
+U07:%x[0,11]
+# WN
+U08:%x[0,13]
+# word
+U09:%x[0,3]
+
+# tense, polarity, PPdetail
+U10:%x[0,9]
+U11:%x[0,10]
+U12:%x[0,12]
+
+

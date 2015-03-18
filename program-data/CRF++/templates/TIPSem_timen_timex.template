@@ -1,0 +1,15 @@
+
+# 0 file| 1 sent-num| 2 tok-num|
+# 3 word|4 pos|5 lemma|6 rolesconf|7 simpleroles|8 depverb|9 tense|10 polarity|11 mainphrase|12 PPdetail| 13wn
+# 14 te-numval  15 te-pattern 16 lastword 17 lastNU 18 lastwordgranularity 19 setinicator | 20 element
+# timex-TYPE|ID?|DCT[file](t0)=x|TempFunc|AnchorRel|Anchor|reference [|value]?????????
+
+
+
+# numval
+U00:%x[0,14]
+#pattern
+U01:%x[0,15]
+# PPdetail
+U02:%x[0,12]
+

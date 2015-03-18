@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="EVENT" attribs="">
+		// pos==^V.*
+		// (_*_)verb!=be
+		<rule id="1">verb!=(-|be)</rule>
+	</ruleset>
+</rulesets>

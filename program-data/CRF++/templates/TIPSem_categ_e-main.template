@@ -1,0 +1,18 @@
+# the / is used for combinations
+
+# 0 file| 1 lid | 2 eid | 3 tid |    
+# 4 e1_class| 5 e1_pos| 6 e1_token| 7 e1_tense| 8 e1_tense-aspect| 9 e2_class|10 e2_pos|11 e2_token|12 e2_tense|13 e2_tense-aspect
+
+
+
+U00:%x[0,4]
+U01:%x[0,5]
+U02:%x[0,6]
+U03:%x[0,7]
+U04:%x[0,8]
+U05:%x[0,9]
+U06:%x[0,10]
+U07:%x[0,11]
+U08:%x[0,12]
+U09:%x[0,13]
+

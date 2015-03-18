@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<rulesets id="1">
+	<ruleset id="1" tag="EVENT" attr="class=REPORTING;">
+		<rule id="1">pos=V.*(_*_)syntbio=B-VP(_*_)lemma=(say|report|accord|estimate)</rule>
+	</ruleset>
+</rulesets>
