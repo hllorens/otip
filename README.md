@@ -47,7 +47,9 @@ Requirements:
 - Treetagger            	(the new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz, that is 
 				a copy, the original treetagger license aplies)
-			NOTE: Set TreeTagger in any path and tune 
+				Test it: echo "I went to cinema yesterday." | $HOME/TreeTagger/tree-tagger-english
+			NOTE: Put TreeTagger inside program-data (default location).
+			Otherwse set TreeTagger in any path and tune 
 			program-data/config.properties file.
 			By default renamed to example.config.properties
 
