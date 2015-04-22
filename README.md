@@ -44,6 +44,7 @@ Requirements:
 - JRE 6 or later		(http://www.java.com/)
 - CRF++ 0.53 (or later)*	(http://crfpp.sourceforge.net/) 
    [recommended/tested 0.54]	(./configure && make && sudo make install)
+				Test it: crf_test -v (from any path)
 - Treetagger            	(the new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz, that is 
 				a copy, the original treetagger license aplies)
