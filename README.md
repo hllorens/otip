@@ -43,7 +43,7 @@ Requirements:
 - UNIX-like shell 		(Linux, Mac OS, or Windows with cygwin)
 - JRE 6 or later		(http://www.java.com/)
 - CRF++ 0.53 (or later)*	(http://crfpp.sourceforge.net/) 
-				(./configure && make && sudo make install)
+   [recommended/tested 0.54]	(./configure && make && sudo make install)
 - Treetagger            	(the new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz, that is 
 				a copy, the original treetagger license aplies)
