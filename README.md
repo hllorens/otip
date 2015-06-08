@@ -92,6 +92,16 @@ Installation
           program-data/TreeTagger/bin/* program-data/TreeTagger/cmd/*
 	  NOTE: if you do not want to use that path intall TreeTagger 
                 in any path and tune program-data/config.properties file
+5) OPTIONAL (only needed for es-ES): See es.cfg file of Freeling:
+#DictionaryFile=$FREELINGSHARE/es/maco.db    --> uncomment this line
+DictionaryFile=$FREELINGSHARE/es/mydicc.db   --> comment this line
+
+But mydicc.db does not exist.
+
+Everything works fine after swapping the comment:
+DictionaryFile=$FREELINGSHARE/es/maco.db
+#DictionaryFile=$FREELINGSHARE/es/mydicc.db
+
 permissions
 5) Run TIPSem help:  java -jar "path_to_jar/tipsem-1.0.0.jar" -h
 
