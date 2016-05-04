@@ -112,8 +112,10 @@ Usage
 TIPSem input must be UTF8 (or ASCII). Run with -h to get the following help:
  -a,--action <arg>             	Action/s (annotatecrf, annotate)
  -ap,--action_parameters <arg> 	Actions can have comma separated params
-				Valid parameters are: dct (default: today date)
+				Valid parameters are:
+				dct (default: today date)
                                 entities (default: timex, event, relations)
+                                inputf (default: plain) other options: te3input, tml, isotml
 -d,--debug                      Debug mode: Output stack trace (default: off) 
  -h,--help                      Print this help 
  -l,--lang <arg>                Language code (en,es) (default  auto-detect) 
