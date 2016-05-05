@@ -34,7 +34,7 @@ Description
 
 TIPSem is a temporal information extraction software written in Java.
 It automatically annotates from raw text TimeML (http://timeml.org) temporal 
-expressions, events, and temporal relations.
+expressions, events, and temporal relations (tlink).
 TIPSem is a command line application.
 
 
@@ -114,8 +114,8 @@ TIPSem input must be UTF8 (or ASCII). Run with -h to get the following help:
  -ap,--action_parameters <arg> 	Actions can have comma separated params
 				Valid parameters are:
 				dct (default: today date)
-                                entities (default: timex, event, relations)
-                                inputf (default: plain) other options: te3input, tml, isotml
+                                entities (default: timex, event, tlink)
+                                inputf (default: plain) options: plain, te3input, tml, isotml
 -d,--debug                      Debug mode: Output stack trace (default: off) 
  -h,--help                      Print this help 
  -l,--lang <arg>                Language code (en,es) (default  auto-detect) 
