@@ -67,7 +67,7 @@ Optional: Only if you are an expert on installing libraries -------------------
 * For compiling Yamcha downgrade compiler to 4.1 (./configure CXX=g++-4.1).
 	You need to install g++-4.1.
 	(e.g., UBUNTU LTS versions: sudo apt-get install g++-4.1)
--------------------------------------------------------------------------------
+
 
 IMPORTANT NOTE:
 	- If you never installed a library in Linux you probably need to export 
@@ -79,9 +79,12 @@ IMPORTANT NOTE:
 Installation
 ------------
 1) Install the requirements (JRE7, Maven and CRF++).
+
 2) Extract TIPSem folder in any_location of your computer
+
 3) Run mvn clean package to obtain the target/ distribution, 
 	copy it in the desired location (e.g., path_to_TIPSem-x.x.x)
+	
 4) Install TreeTagger as follows:
 	- cd path_to_TIPSem-x.x.x/program-data/TreeTagger
 	- If tree-tagger-english bin/ cmd/ are not there -> 
@@ -92,15 +95,18 @@ Installation
           program-data/TreeTagger/bin/* program-data/TreeTagger/cmd/*
 	  NOTE: if you do not want to use that path intall TreeTagger 
                 in any path and tune program-data/config.properties file
-5) OPTIONAL (only needed for es-ES): See es.cfg file of Freeling:
-#DictionaryFile=$FREELINGSHARE/es/maco.db    --> uncomment this line
-DictionaryFile=$FREELINGSHARE/es/mydicc.db   --> comment this line
+
+5) OPTIONAL (only needed for es-ES): See es.cfg file of Freeling
+
+ # DictionaryFile=$FREELINGSHARE/es/maco.db # uncomment this line
+
+ DictionaryFile=$FREELINGSHARE/es/mydicc.db # comment this line
 
 But mydicc.db does not exist.
 
 Everything works fine after swapping the comment:
-DictionaryFile=$FREELINGSHARE/es/maco.db
-#DictionaryFile=$FREELINGSHARE/es/mydicc.db
+ DictionaryFile=$FREELINGSHARE/es/maco.db
+ # DictionaryFile=$FREELINGSHARE/es/mydicc.db
 
 permissions
 5) Run TIPSem help:  java -jar "path_to_jar/tipsem-1.0.0.jar" -h
@@ -110,15 +116,22 @@ permissions
 Usage
 -----
 TIPSem input must be UTF8 (or ASCII). Run with -h to get the following help:
+
  -a,--action <arg>             	Action/s (annotatecrf, annotate)
+ 
  -ap,--action_parameters <arg> 	Actions can have comma separated params
 				Valid parameters are:
 				dct (default: today date)
                                 entities (default: timex, event, tlink)
                                 inputf (default: plain) options: plain, te3input, tml, isotml
+                                
 -d,--debug                      Debug mode: Output stack trace (default: off) 
+
  -h,--help                      Print this help 
+ 
+
  -l,--lang <arg>                Language code (en,es) (default  auto-detect) 
+ 
  -t,--text <arg>                To use text instead of a file (for short texts) 
 
 
@@ -127,15 +140,20 @@ Examples:
 --------
 
 Annotate text: java -jar "path_to_jar/tipsem-1.0.0.jar" -t "I saw you yesterday"
+
 Annotate file: java -jar "path_to_jar/tipsem-1.0.0.jar" file.txt
+
 Annotate folder: java -jar "path_to_jar/tipsem-1.0.0.jar" folder/*.txt
+
 Change dct and annotate only events: java -jar "path_to_jar/tipsem-1.0.0.jar"
        -a annotatecrf -ap dct=1999-09-01,entities=event -t "I saw you yesterday"
+       
 Force language English and use SVM (normal TIPSemB): java -jar 
 "path_to_jar/tipsem-1.0.0.jar" -a annotate -t "I saw you yesterday" -l en
 For Spanish: -l es
 
 * for -t input the output is written in the standard output.
+
 * for file/s input the output is written is a file with the same name + ".tml"
 
 
@@ -144,7 +162,8 @@ Contact info:
 Hector Llorens (hllorens@ua.es), University of Alicante, Spain
 
 
-OLD DEPRECATED:
+Deprecated notes:
+-------------
 - download "tagger package": 
 wget ftp://ftp.ims.uni-stuttgart.de/pub/corpora/tree-tagger-linux-3.2.tar.gz
 - tar xvzf tree-tagger-linux-3.2.tar.gz
