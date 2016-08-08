@@ -96,7 +96,13 @@ Installation
 	  NOTE: if you do not want to use that path intall TreeTagger 
                 in any path and tune program-data/config.properties file
 
-5) OPTIONAL (only needed for es-ES): See es.cfg file of Freeling
+5) Obtain models:
+
+- Option A (easy): Copying the models from http://cognitionis.com/TIPSem.zip. They are located in the folders "program-data/CRF++" and "program-data/SVM".
+
+- Option B (difficult): Training your own models using a TimeML annotated corpus e.g., TimeBank or the TempEval-3 trainset.
+
+6) OPTIONAL (only needed for es-ES): See es.cfg file of Freeling
 
  # DictionaryFile=$FREELINGSHARE/es/maco.db # uncomment this line
 
@@ -109,12 +115,15 @@ Everything works fine after swapping the comment:
  # DictionaryFile=$FREELINGSHARE/es/mydicc.db
 
 permissions
-5) Run TIPSem help:  java -jar "path_to_jar/tipsem-1.0.0.jar" -h
+Run TIPSem help:  java -jar "path_to_jar/tipsem-1.0.0.jar" -h
 
 
 
 Usage
 -----
+
+IMPORTANT: Make sure you have models (installation step 5)
+
 TIPSem input must be UTF8 (or ASCII). Run with -h to get the following help:
 
  -a,--action <arg>             	Action/s (annotatecrf, annotate)
@@ -159,7 +168,7 @@ For Spanish: -l es
 
 Contact info: 
 ------------
-Hector Llorens (hllorens@ua.es), University of Alicante, Spain
+Hector Llorens (hector.llorens.martinez@gmail.com)
 
 
 Deprecated notes:
