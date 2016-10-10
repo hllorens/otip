@@ -42,8 +42,8 @@ Requirements:
 ------------
 - UNIX-like shell 		(Linux, Mac OS, or Windows with cygwin)
 - JRE 6 or later		(http://www.java.com/)
-- CRF++ 0.53 (or later)*	(http://crfpp.sourceforge.net/) 
-   [recommended/tested 0.54]	(./configure && make && sudo make install)
+- CRF++ 0.53 (or later)*	(https://taku910.github.io/crfpp/) 
+   [recommended/tested 0.54]	(./configure CXX=g++-4.4 --prefix=$HOME/local && make && make install)
 				Test it: crf_test -v (from any path)
 - Treetagger            	(the new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz, that is 
@@ -56,7 +56,7 @@ Requirements:
 
 * For compiling CRF++ g++ compiler must be < 4.6.
 (e.g., UBUNTU -- two versions of g++ can coexist: sudo apt-get install g++-4.4 
-	--> ./configure CXX=g++-4.4 && make && sudo make install)
+	--> ./configure CXX=g++-4.4 --prefix $HOME/local && make && make install)
 
 
 Optional: Only if you are an expert on installing libraries -------------------
