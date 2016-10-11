@@ -40,7 +40,7 @@ TIPSem is a command line application.
 
 Requirements:
 ------------
-- UNIX-like shell 		(Linux, Mac OS, or Windows with cygwin)
+- UNIX-like shell 		(Linux, Mac OS) (Windows + cygwing not recommended, difficult to make it work)
 - JRE 6 or later		(http://www.java.com/)
 - Maven                         (http://maven.apache.org/) 
    [last tested 3.3.9]		just download untar and add bin/ to the path
