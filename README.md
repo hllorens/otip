@@ -42,9 +42,13 @@ Requirements:
 ------------
 - UNIX-like shell 		(Linux, Mac OS, or Windows with cygwin)
 - JRE 6 or later		(http://www.java.com/)
+- Maven                         (http://maven.apache.org/) 
+   [last tested 3.3.9]		just download untar and add bin/ to the path
+- gcc/g++                       (http://openwall.info/wiki/internal/gcc-local-build) 
+   [last tested 4.6.3]          to compile CRF++ , newer CRF++ can work with newer g++
 - CRF++ 0.53 (or later)*	(https://taku910.github.io/crfpp/) 
-   [recommended/tested 0.54]	(./configure CXX=g++-4.4 --prefix=$HOME/local && make && make install)
-				Test it: crf_test -v (from any path)
+   [recommended/tested 0.58]	./configure --prefix=$HOME/local && make && make install, add bin/ to the path
+				Test it: crf_test --version (from any path)
 - Treetagger            	(the new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz, that is 
 				a copy, the original treetagger license aplies)
@@ -54,7 +58,7 @@ Requirements:
 			program-data/config.properties file.
 			By default renamed to example.config.properties
 
-* For compiling CRF++ g++ compiler must be < 4.6.
+* For compiling CRF++ if 0.58 you can use g++ >=4.6 < 0.55, g++ compiler must be <= 4.5.
 (e.g., UBUNTU -- two versions of g++ can coexist: sudo apt-get install g++-4.4 
 	--> ./configure CXX=g++-4.4 --prefix $HOME/local && make && make install)
 
@@ -82,13 +86,14 @@ Installation
 
 2) Extract TIPSem folder in any_location of your computer
 
-3) Run mvn clean package to obtain the target/ distribution, 
+3) Run: "mvn clean package" to obtain the "target/" distribution, 
 	copy it in the desired location (e.g., path_to_TIPSem-x.x.x)
 	
 4) Install TreeTagger as follows:
-	- cd path_to_TIPSem-x.x.x/program-data/TreeTagger
-	- If tree-tagger-english bin/ cmd/ are not there -> 
+	- cd path_to_TIPSem-x.x.x/program-data/ (the compiled "target/" one)
+	- If TreeTagger/tree-tagger-english bin/ cmd/ are not there -> 
 	wget http://www.cognitionis.com/TreeTagger.tar.gz (use this copy)
+	- tar xfzf TreeTagger.tar.gz
 	- make sure that every file is executable in /bin and /cmd, make sure 
 	  that "TreeTagger/tree-tagger-english" have execution permissions
 	- chmod a+x program-data/TreeTagger/tree-tagger-english 
@@ -99,6 +104,7 @@ Installation
 5) Obtain models:
 
 - Option A (easy): Copying the models from http://cognitionis.com/TIPSem.zip. They are located in the folders "program-data/CRF++" and "program-data/SVM".
+    -- copy the "models/" folder into your "target/program-data/CRF++/models/"
 
 - Option B (difficult): Training your own models using a TimeML annotated corpus e.g., TimeBank or the TempEval-3 trainset.
 
