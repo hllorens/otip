@@ -1,6 +1,6 @@
 TIPSem: TIPSem (full-featured) and TIPSemB (BASELINE based on Morphosyntax)
 --------------------------------------------------------------------------------
-website: http://gplsi.dlsi.ua.es/demos/TIMEE/
+website: http://www.cognitionis.com/tipsem/
 
 Conditions/License
 ------------------
