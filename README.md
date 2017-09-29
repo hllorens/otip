@@ -1,6 +1,6 @@
 TIPSem: TIPSem (full-featured) and TIPSemB (BASELINE based on Morphosyntax)
 --------------------------------------------------------------------------------
-website: http://www.cognitionis.com/tipsem/
+website: http://www.cognitionis.com
 
 Conditions/License
 ------------------
@@ -51,7 +51,7 @@ Requirements:
 				Test it: crf_test --version (from any path)
 - Treetagger            	(the new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz, that is 
-				a copy, the original treetagger license aplies)
+				a copy [the original treetagger license applies])
 				Test it: echo "I went to cinema yesterday." | path-to-otip/program-data/TreeTagger/tree-tagger-english
 			NOTE: Put TreeTagger inside program-data (default location).
 			Otherwse set TreeTagger in any path and tune 
