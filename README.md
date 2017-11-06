@@ -50,8 +50,7 @@ Requirements:
    [recommended/tested 0.58]	./configure --prefix=$HOME/local && make && make install, add bin/ to the path
 				Test it: crf_test --version (from any path)
 - Treetagger            	(the new version does not work, use 
-				www.cognitionis.com/TreeTagger.tar.gz, that is 
-				a copy [the original treetagger license applies])
+				www.cognitionis.com/TreeTagger.tar.gz (or https://www.dropbox.com/s/4pdlhg4rwv6smos/TreeTagger.tar.gz?dl=0), that is a copy [the original treetagger license applies])
 				Test it: echo "I went to cinema yesterday." | path-to-otip/program-data/TreeTagger/tree-tagger-english
 			NOTE: Put TreeTagger inside program-data (default location).
 			Otherwse set TreeTagger in any path and tune 
@@ -92,7 +91,7 @@ Installation
 4) Install TreeTagger as follows:
 	- cd path_to_TIPSem-x.x.x/program-data/ (the compiled "target/" one)
 	- If TreeTagger/tree-tagger-english bin/ cmd/ are not there -> 
-	wget http://www.cognitionis.com/TreeTagger.tar.gz (use this copy)
+	wget http://www.cognitionis.com/TreeTagger.tar.gz or https://www.dropbox.com/s/4pdlhg4rwv6smos/TreeTagger.tar.gz?dl=0
 	- tar xfzf TreeTagger.tar.gz
 	- make sure that every file is executable in /bin and /cmd, make sure 
 	  that "TreeTagger/tree-tagger-english" have execution permissions
@@ -103,7 +102,7 @@ Installation
 
 5) Obtain models:
 
-- Option A (easy): Copying the models from http://cognitionis.com/TIPSem.zip. They are located in the folders "program-data/CRF++" and "program-data/SVM".
+- Option A (easy): Copying the models from http://cognitionis.com/TIPSem.zip or https://www.dropbox.com/s/wf6pfw3ud9jclag/TIPSem.zip?dl=0. They are located in the folders "program-data/CRF++" and "program-data/SVM".
     -- copy the "models/" folder into your "target/program-data/CRF++/models/"
 
 - Option B (difficult): Training your own models using a TimeML annotated corpus e.g., TimeBank or the TempEval-3 trainset.
