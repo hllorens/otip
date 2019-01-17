@@ -106,6 +106,9 @@ Installation
     -- copy the "models/" folder into your "target/program-data/CRF++/models/"
 
 - Option B (difficult): Training your own models using a TimeML annotated corpus e.g., TimeBank or the TempEval-3 trainset.
+This should provide a good insight on the actions available including training+test over a dataset:
+https://github.com/hllorens/otip/blob/master/src/main/java/com/cognitionis/tipsem/OptionHandler.java
+Running the help option (see below) will also provide useful info.
 
 6) OPTIONAL (only needed for es-ES): See es.cfg file of Freeling
 
@@ -119,8 +122,7 @@ Everything works fine after swapping the comment:
  DictionaryFile=$FREELINGSHARE/es/maco.db
  # DictionaryFile=$FREELINGSHARE/es/mydicc.db
 
-permissions
-Run TIPSem help:  java -jar "path_to_jar/tipsem-1.0.0.jar" -h
+permissions are important
 
 
 
@@ -128,6 +130,8 @@ Usage
 -----
 
 IMPORTANT: Make sure you have models (installation step 5)
+
+Run TIPSem help:  java -jar "path_to_jar/tipsem-1.0.0.jar" -h
 
 TIPSem input must be UTF8 (or ASCII). Run with -h to get the following help:
 
