@@ -65,7 +65,8 @@ Requirements:
 Optional: Only if you are an expert on installing libraries -------------------
 - TinySVM 0.09 (for SVM)	(http://chasen.org/~taku/software/TinySVM/)
 - YamCha 0.33 (for SVM)*	(http://chasen.org/~taku/software/yamcha/)
-- Freeling2.1 (only for Spanish)(http://nlp.lsi.upc.edu/freeling/)(read license)
+- Freeling2.1 or greater (only for Spanish)(http://nlp.lsi.upc.edu/freeling/)(read license)
+-- Tested successfully up to version 4.0 (June-2019)
 
 * For compiling Yamcha downgrade compiler to 4.1 (./configure CXX=g++-4.1).
 	You need to install g++-4.1.
