@@ -180,6 +180,16 @@ Contact info:
 Hector Llorens (hector.llorens.martinez@gmail.com)
 
 
+Known issues:
+------------
+https://github.com/hllorens/otip/issues/2 There are no crf models for es-es tlink e-dct and e-t (tlink)
+Errors found (CRF++):
+        java.lang.Exception: Template file (TIPSemB_categ_e-t_ES.CRFmodel) not found.
+        java.lang.Exception: Template file (TIPSemB_categ_e-dct_ES.CRFmodel) not found.
+Solution use the SVM version in general for es-es with `-a annotate`.
+If you need to annotate timex and events with CRF and only links with SVM then make use of `-ap entities tlink -inputf tml` using the timex and event annotated part which you can obtain before with `-ap entities timex -inputf plain` and the same for events.
+	
+
 Deprecated notes:
 -------------
 - download "tagger package": 
