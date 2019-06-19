@@ -142,7 +142,7 @@ TIPSem input must be UTF8 (or ASCII). Run with -h to get the following help:
  -ap,--action_parameters <arg> 	Actions can have comma separated params
 				Valid parameters are:
 				dct (default: today date)
-                                entities (default: timex, event, tlink)
+                                entities (default: timex, event, tlink) [separated by ; e.g., timex;event]
                                 inputf (default: plain) options: plain, te3input, tml, isotml
                                 
 -d,--debug                      Debug mode: Output stack trace (default: off) 
@@ -167,6 +167,9 @@ Annotate folder: java -jar "path_to_jar/tipsem-1.0.0.jar" folder/*.txt
 
 Change dct and annotate only events: java -jar "path_to_jar/tipsem-1.0.0.jar"
        -a annotatecrf -ap dct=1999-09-01,entities=event -t "I saw you yesterday"
+
+Change annotate timex and events but not tlinks: java -jar "path_to_jar/tipsem-1.0.0.jar"
+       -a annotatecrf -ap entities=timex;event -t "I saw you yesterday"
        
 Force language English and use SVM (normal TIPSemB): java -jar 
 "path_to_jar/tipsem-1.0.0.jar" -a annotate -t "I saw you yesterday" -l en
@@ -189,7 +192,7 @@ Errors found (CRF++):
         java.lang.Exception: Template file (TIPSemB_categ_e-t_ES.CRFmodel) not found.
         java.lang.Exception: Template file (TIPSemB_categ_e-dct_ES.CRFmodel) not found.
 Solution use the SVM version in general for es-es with `-a annotate`.
-If you need to annotate timex and events with CRF and only links with SVM then make use of `-ap entities tlink -inputf tml` using the timex and event annotated part which you can obtain before with `-ap entities timex -inputf plain` and the same for events.
+If you need to annotate timex and events with CRF and only links with SVM then make use of `-ap entities=tlink -inputf tml` using the timex and event annotated part which you can obtain before with `-ap entities=timex;event -inputf plain`.
 	
 
 Deprecated notes:
