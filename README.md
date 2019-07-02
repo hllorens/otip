@@ -49,8 +49,8 @@ Requirements:
 - CRF++ 0.53 (or later)*	(https://taku910.github.io/crfpp/) 
    [recommended/tested 0.58]	./configure --prefix=$HOME/local && make && make install, add bin/ to the path
 				Test it: crf_test --version (from any path)
-- Treetagger            	(the new version does not work, use 
-				www.cognitionis.com/TreeTagger.tar.gz (or https://www.dropbox.com/s/4pdlhg4rwv6smos/TreeTagger.tar.gz?dl=0), that is a copy [the original treetagger license applies])
+- Treetagger            	The new version does not work, use 
+				www.cognitionis.com/TreeTagger.tar.gz or https://www.dropbox.com/s/4pdlhg4rwv6smos/TreeTagger.tar.gz?dl=0, that is a copy [the original treetagger license applies])
 				Test it: echo "I went to cinema yesterday." | path-to-otip/program-data/TreeTagger/tree-tagger-english
 			NOTE: Put TreeTagger inside program-data (default location).
 			Otherwse set TreeTagger in any path and tune 
