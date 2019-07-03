@@ -40,7 +40,7 @@ TIPSem is a command line application.
 
 Requirements:
 ------------
-- UNIX/Linux/MacOS              Until the windows paths issues are fixed
+- UNIX/Linux/MacOS              Issues in Win/Cygwin (~~WINDOWS, CYGWIN~~ NOT SUPPORTED)
 - UNIX-like shell 		(Linux, Mac OS)
 				(Windows DOS does not work)
 				(Cygwin still not ready to work some paths need to be adapted in the code)
