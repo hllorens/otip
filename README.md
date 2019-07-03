@@ -51,11 +51,7 @@ Requirements:
 				Test it: crf_test --version (from any path)
 - Treetagger            	The new version does not work, use 
 				www.cognitionis.com/TreeTagger.tar.gz or https://www.dropbox.com/s/4pdlhg4rwv6smos/TreeTagger.tar.gz?dl=0, that is a copy [the original treetagger license applies])
-				Test it: echo "I went to cinema yesterday." | path-to-otip/program-data/TreeTagger/tree-tagger-english
-			NOTE: Put TreeTagger inside program-data (default location).
-			Otherwse set TreeTagger in any path and tune 
-			program-data/config.properties file.
-			By default renamed to example.config.properties
+
 
 * For compiling CRF++ if 0.58 you can use g++ >=4.6 < 0.55, g++ compiler must be <= 4.5.
 (e.g., UBUNTU -- two versions of g++ can coexist: sudo apt-get install g++-4.4 
@@ -83,7 +79,7 @@ IMPORTANT NOTE:
 
 Installation
 ------------
-1) Install the requirements (JRE7, Maven and CRF++).
+1) Install the requirements (JRE7, Maven and CRF++). On windows you can just download zip, extract to C: and add to the PATH
 
 2) Extract TIPSem folder in any_location of your computer
 
@@ -101,6 +97,54 @@ Installation
           program-data/TreeTagger/bin/* program-data/TreeTagger/cmd/*
 	  NOTE: if you do not want to use that path intall TreeTagger 
                 in any path and tune program-data/config.properties file
+		By default renamed to example.config.properties
+	Test it: echo "I went to cinema yesterday." | path-to-otip/program-data/TreeTagger/tree-tagger-english
+		WINDOWS/CIGWIN: Download Windows version of TreeTagger https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/#Windows
+		perl cmd/utf8-tokenize.perl -e -a lib/english-abbreviations FILE-TO-ANNOTATE | ./bin/tree-tagger lib/english.par -token -lemma -sgml -no-unknown
+
+Modification to make TreeTagger work alone in tree-tagger-english script (with relative paths):
+```
+#!/bin/bash
+
+# Hector Llorens hack for executing TreeTagger
+
+scriptPath=$(cd $(dirname $0); pwd -P)
+
+pushd . > /dev/null;
+
+cd $scriptPath;
+
+BIN=./bin
+CMD=cmd
+LIB=lib
+
+OPTIONS="-token -lemma -pt-with-lemma -no-unknown"
+
+TOKENIZER=${CMD}/tokenize.pl
+TAGGER=${BIN}/tree-tagger
+ABBR_LIST=${LIB}/english-abbreviations
+PARFILE=${LIB}/english.par
+LEXFILE=${LIB}/english-lexicon.txt
+
+#$TOKENIZER -e -a $ABBR_LIST $* |
+# remove empty lines
+#grep -v '^$' |
+# external lexicon lookup
+#perl $CMD/lookup.perl $LEXFILE |
+# tagging
+#$TAGGER $OPTIONS $PARFILE | 
+#perl -pe 's/\tV[BDHV]/\tVB/;s/IN\/that/\tIN/;'
+##TOKENIZER=${CMD}/utf8-tokenize.perl
+
+perl cmd/utf8-tokenize.perl -e -a lib/english-abbreviations $* | ./bin/tree-tagger lib/english.par -token -lemma -sgml -no-unknown
+#perl ${CMD}/utf8-tokenize.perl -e -a $ABBR_LIST $* | ${BIN}/tree-tagger $ABBR_LIST -token -lemma -sgml -no-unknown | 
+#perl -pe 's/\tV[BDHV]/\tVB/;s/IN\/that/\tIN/;'
+
+popd;
+```
+	CIGWIN issue: TIPSem might be trying bad paths i.e., non windows compatible or too compatible? java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified. Tree Tagger works standalone but not when called from TIPSem in cygwin
+
+
 
 5) Obtain models:
 
