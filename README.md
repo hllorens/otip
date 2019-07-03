@@ -142,7 +142,8 @@ perl cmd/utf8-tokenize.perl -e -a lib/english-abbreviations $* | ./bin/tree-tagg
 
 popd;
 ```
-	CIGWIN issue: TIPSem might be trying bad paths i.e., non windows compatible or too compatible? java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified. Tree Tagger works standalone but not when called from TIPSem in cygwin
+	CIGWIN issue: TIPSem might be trying bad paths i.e., non windows compatible or too compatible? java.io.IOException: Cannot run program "/bin/sh": CreateProcess error=2, The system cannot find the file specified. Tree Tagger works standalone with the script above but not when called from TIPSem in cygwin. 
+	SOLUTION: cygpath -w should be added in many places, currently the program is trying file:// which is not working on cygwin
 
 
 
