@@ -37,7 +37,8 @@ public class OptionHandler {
         CONVERT_TML, DATASET2TML, RECOGNITION2TML,
         //DATASET2REMOVE_ES_TOBE_STATES, DATASET2TML, TML2DATASET4MODEL, TMLDIR2DATASET4MODEL,   // se puede eliminar o unir con las anteriores
         UTF_2_ISO_8859_1_SAFE_UTF,
-        TML_NFOLD //, TAB_NFOLD, TEMPEVAL_RECOGNITION_10FOLD, TEMPEVAL_CLASSIFICATION_10FOLD,
+        TML_NFOLD, //, TAB_NFOLD, TEMPEVAL_RECOGNITION_10FOLD, TEMPEVAL_CLASSIFICATION_10FOLD,
+        TREETAGERCYGWIN
         ;
     }
 
@@ -83,6 +84,46 @@ public class OptionHandler {
                                 TE3inputReader.close();
                             }
                         }
+                    }
+                    break;
+
+                case TREETAGERCYGWIN:
+                    for (int i = 0; i < input_files.length; i++) {
+                        BufferedReader br = new BufferedReader(new FileReader("C:\\cygwin\\home\\Hector_Llorens\\otip\\file.txt")); ///home/Hector_Llorens/otip/
+                        try {
+                            StringBuilder sb = new StringBuilder();
+                            String line = br.readLine();
+
+                            while (line != null) {
+                                sb.append(line);
+                                sb.append(System.lineSeparator());
+                                line = br.readLine();
+                            }
+                            String everything = sb.toString();
+                            System.out.println("\n\ntext: " + everything);
+                        } finally {
+                            br.close();
+                        }
+                        /*String currdir=System.getProperty("user.dir");
+                        System.out.println("\n\nDir: " + currdir);
+                        System.setProperty("file.separator","/");
+                        System.setProperty("path.separator","/");
+                        currdir=System.getProperty("user.dir");
+                        System.out.println("\n\nDir: " + currdir);*/
+
+                        System.out.println("\n\nFile: " + input_files[i]);
+                        //PlainFile nlpfile = new PlainFile(input_files[i]);
+                        //if (!nlpfile.getClass().getSimpleName().equals("PlainFile")) {
+                        //    throw new Exception("TIPSem requires PlainFile files as input. Found: " + nlpfile.getClass().getSimpleName());
+                        //}
+                        //System.out.println("\n\nFile: " + nlpfile.getFile().getCanonicalPath());
+                        //TreeTaggerCygwin.run(nlpfile.getFile().getCanonicalPath());
+                        
+                        //input_files[i]="/home/Hector_Llorens/otip/"+input_files[i];
+                        input_files[i]="C:\\cygwin\\home\\Hector_Llorens\\otip\\"+input_files[i];
+                        System.out.println("\n\nFile: " + input_files[i]);
+                        TreeTaggerCygwin.run2(input_files[i]);
+                        TreeTaggerCygwin.run_tok2(input_files[i]);
                     }
                     break;
 
