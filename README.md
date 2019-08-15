@@ -156,7 +156,7 @@ popd;
 - Option A (easy): Copying the models from http://cognitionis.com/TIPSem.zip or https://www.dropbox.com/s/wf6pfw3ud9jclag/TIPSem.zip?dl=0. They are located in the folders "program-data/CRF++" and "program-data/SVM".
     -- copy the "models/" folder into your "target/program-data/CRF++/models/"
 
-- Option B (difficult): Training your own models using a TimeML annotated corpus e.g., TimeBank or the TempEval-3 trainset.
+- Option B (difficult): Training your own models using a TimeML annotated corpus e.g., TimeBank or the TempEval-3 trainset (https://doi.org/10.6084/m9.figshare.9586532).
 This should provide a good insight on the actions available including training+test over a dataset:
 https://github.com/hllorens/otip/blob/master/src/main/java/com/cognitionis/tipsem/OptionHandler.java
 Running the help option (see below) will also provide useful info.
